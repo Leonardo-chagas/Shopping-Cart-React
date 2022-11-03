@@ -1,10 +1,46 @@
 {
     "products": [
         {
-            "image": "",
-            "name": "",
-            "description": "",
-            "price": 0
+            "id": 1,
+            "image": "../images/ipad.png",
+            "name": "Ipad",
+            "description": "Um Ipad",
+            "price": 2389.99
+        },
+        {
+            "id": 2,
+            "image": "../images/knives_set.png",
+            "name": "Set de Facas",
+            "description": "Um set com 5 facas de cozinha",
+            "price": 79.99
+        },
+        {
+            "id": 3,
+            "image": "../images/mug.png",
+            "name": "caneca",
+            "description": "Uma caneca excelente para tomar o seu café ou chá",
+            "price": 25.99
+        },
+        {
+            "id": 4,
+            "image": "../images/office_chair.png",
+            "name": "Cadeira de Escritório",
+            "description": "uma cadeira de escritório bem comfortável",
+            "price": 1239.99
+        },
+        {
+            "id": 5,
+            "image": "../images/smart_tv.png",
+            "name": "Smart TV",
+            "description": "Uma smart tv",
+            "price": 4500.00
+        },
+        {
+            "id": 6,
+            "image": "../images/toaster.png",
+            "name": "Torradeira",
+            "description": "uma torradeira",
+            "price": 59.99
         }
     ]
 }
