@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
+import './css/app.css'
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState([])
@@ -26,11 +27,15 @@ function App() {
     setShoppingCart([...shoppingCart, product])
   }
 
+  const RemoveFromShoppingCart = (id) => {
+    setShoppingCart(shoppingCart.filter((product) => product.shoppingId !== id))
+  }
+
   return (
     <Router>
-      <div className="App">
+      <div id="App">
         <Routes>
-          <Route path='/' element={<Products products={products}></Products>}></Route>
+          <Route path='/' element={<Products products={products} color={'green'} text={'Adicionar ao carrinho'} onClick={AddToShoppingCart}></Products>}></Route>
           <Route path='/shoppingCart' element={<ShoppingCart></ShoppingCart>}></Route>
         </Routes>
       </div>
