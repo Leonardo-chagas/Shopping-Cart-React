@@ -1,9 +1,25 @@
 import React from 'react'
+import Product from './Product'
+import Products from './Products'
+import Button from './Button'
+import { useState } from 'react'
 
-const ShoppingCart = () => {
+const ShoppingCart = (products, onClick) => {
+  const [total, setTotal] = useState(0)
+
+  products.array.forEach(product => {
+    setTotal(total + product.price)
+  });
+
+  const Buy = () => {
+    alert(`Compra Realizada no valor de R$${total}`)
+  }
+
   return (
     <div>
-      
+      <Products products={products} color={'red'} text={'Remover do Carrinho'} onClick={onClick}></Products>
+      <h3>Valor Total: R$ {total}</h3>
+      <Button color={'green'} text={'Realizar Compra'} onClick={Buy}></Button>
     </div>
   )
 }

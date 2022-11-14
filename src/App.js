@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
+import Header from './components/Header';
 import './css/app.css'
 
 function App() {
@@ -34,9 +35,10 @@ function App() {
   return (
     <Router>
       <div id="App">
+        <Header></Header>
         <Routes>
           <Route path='/' element={<Products products={products} color={'green'} text={'Adicionar ao carrinho'} onClick={AddToShoppingCart}></Products>}></Route>
-          <Route path='/shoppingCart' element={<ShoppingCart></ShoppingCart>}></Route>
+          <Route path='/shoppingCart' element={<ShoppingCart products={shoppingCart}></ShoppingCart>}></Route>
         </Routes>
       </div>
     </Router>
