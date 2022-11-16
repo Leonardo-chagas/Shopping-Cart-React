@@ -7,7 +7,10 @@ const Header = () => {
   return (
     <header>
       <h1>Shopping Cart</h1>
-      <Link to={location.pathname == '/' ? '/shoppingCart' : '/'}>{location.pathname == '/' ? 'Carrinho de Compras' : 'Voltar'}</Link>
+      <Link id='link'
+      style={{backgroundColor: location.pathname == '/' ? 'green' : 'red'}}
+      to={location.pathname == '/' ? '/shoppingCart' : '/'}
+       >{location.pathname == '/' ? 'Carrinho de Compras' : 'Voltar'}</Link>
     </header>
   )
 }

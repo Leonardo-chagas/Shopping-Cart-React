@@ -38,7 +38,7 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path='/' element={<Products products={products} color={'green'} text={'Adicionar ao carrinho'} onClick={AddToShoppingCart}></Products>}></Route>
-          <Route path='/shoppingCart' element={<ShoppingCart products={shoppingCart}></ShoppingCart>}></Route>
+          <Route path='/shoppingCart' element={<ShoppingCart products={shoppingCart} onClick={RemoveFromShoppingCart}></ShoppingCart>}></Route>
         </Routes>
       </div>
     </Router>
